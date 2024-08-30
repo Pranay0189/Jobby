@@ -35,7 +35,6 @@ const FiltersGroup = (props) => {
           className="search-button-container"
           onClick={getJobs}
         >
-          i
           <BsSearch className="search-icon" />
         </button>
       </div>

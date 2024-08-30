@@ -35,7 +35,7 @@ class Login extends Component {
 
     const { username, password } = this.state
     const userDetails = { username, password }
-    const apiUrl = "https:/apis.ccbp.in/login"
+    const apiUrl = "https://apis.ccbp.in/login"
     const options = {
       method: "POST",
       body: JSON.stringify(userDetails),

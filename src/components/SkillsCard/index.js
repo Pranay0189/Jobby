@@ -1,3 +1,4 @@
+import "./index.css"
 const SkillsCard = (props) => {
   const { skillDetails } = props
   const { imageUrl, name } = skillDetails

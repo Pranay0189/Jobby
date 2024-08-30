@@ -17,7 +17,6 @@
   }
 }
 .home-content {
-  margin-top: 15rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -26,6 +25,7 @@
 }
 @media screen and (min-width: 768px) {
   .home-content {
+    margin-top: 15rem;
     align-items: flex-start;
     width: 50%;
   }
