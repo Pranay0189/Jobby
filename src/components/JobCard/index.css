@@ -1,0 +1,120 @@
+.link-item {
+  list-style: none;
+  text-decoration: none;
+}
+.job-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.logo-title-location-container {
+  display: flex;
+  flex-direction: column;
+}
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+.company-logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+.title-rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title-heading {
+  color: white;
+  font-size: 20px;
+  font-family: "roboto";
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+}
+.rating-icon {
+  color: #fbbf2b;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.rating-heading {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "roboto";
+}
+.location-package-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.location-employee-container {
+  display: flex;
+  flex-direction: row;
+}
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding-left: 5px;
+}
+.location-icon {
+  color: white;
+  font-size: 22px;
+  margin-right: 5px;
+}
+.brief-case-icon {
+  color: white;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.location-heading {
+  color: white;
+  font-size: 14px;
+  font-family: "roboto";
+}
+.package-heading {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "roboto";
+}
+.employee-type-container {
+  display: fex;
+  align-items: center;
+  padding-left: 5px;
+}
+.employee-type-heading {
+  color: whhite;
+  font-size: 14px;
+  font-family: "roboto";
+}
+.line {
+  color: grey;
+  width: 100%;
+}
+.description-heading {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "roboto";
+  margin-bottom: 0px;
+}
+.description-text {
+  text-align: justify;
+  color: white;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: "roboto";
+}

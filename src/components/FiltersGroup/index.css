@@ -1,0 +1,100 @@
+.filters-group-container {
+  margin-top: 16px;
+}
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.search-input {
+  background-color: transparent;
+  color: white;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 6px 16px 6px 16px;
+}
+.search-button-container {
+  background-color: #475569;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 0px;
+}
+.search-icon {
+  color: white;
+  width: 15px;
+  height: 15px;
+}
+.employment-type-heading {
+  color: white;
+  font-weight: 400;
+  font-family: "roboto";
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+.employee-type-list-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.check-label {
+  color: white;
+  margin-left: 10px;
+  font-size: 24px;
+}
+.salary-range-container {
+  display: flex;
+  flex-direction: column;
+}
+.salary-range-heading {
+  color: white;
+  font-weight: 400;
+  font-family: "roboto";
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+.salary-range-list-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.check-label {
+  color: white;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.salary-item {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  padding-bottom: 20px;
+}
+.horizontal-line {
+  background-color: #475569;
+}
+.employment-type-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .search-input-container {
+    display: none;
+  }
+  .filters-group-container {
+    width: 30%;
+    max-width: 300px;
+    min-width: 240px;
+    margin-top: 48px;
+    flex-shrink: 0;
+  }
+}
