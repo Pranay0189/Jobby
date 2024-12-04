@@ -1,0 +1,37 @@
+{
+  "Jobby-App": {
+    "buildx.build.provenance": {
+      "buildType": "https://mobyproject.org/buildkit@v1",
+      "materials": [
+        {
+          "uri": "pkg:docker/node@latest?platform=linux%2Famd64",
+          "digest": {
+            "sha256": "a2fea8b0b74b6e828caa6d83f4b2a0dcb2eb1ff90f30205c32f7bd36ddf976c4"
+          }
+        }
+      ],
+      "invocation": {
+        "configSource": {
+          "entryPoint": "Dockerfile"
+        },
+        "parameters": {
+          "frontend": "dockerfile.v0",
+          "locals": [
+            {
+              "name": "context"
+            },
+            {
+              "name": "dockerfile"
+            }
+          ]
+        },
+        "environment": {
+          "platform": "linux/amd64"
+        }
+      }
+    },
+    "buildx.build.ref": "default/default/tb0whauhmzxkz0shwf1pwu04v",
+    "containerimage.config.digest": "sha256:0b2a0e3a430c43c32a476146865d1f5312a84166fc0479fddf10d8a4f54213b1",
+    "containerimage.digest": "sha256:0b2a0e3a430c43c32a476146865d1f5312a84166fc0479fddf10d8a4f54213b1"
+  }
+}
