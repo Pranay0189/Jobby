@@ -1,55 +1,53 @@
 pipeline {
+    environment {
+        scannerHome = tool "SonarScanner"
+    }
     agent any
-
+    
     tools {
-        nodejs "NODEJS"   
+        nodejs "NODEJS"
     }
-
-    environment{
-        registryCredentials: "ecr:ap-south-1:awscreds"
-        imageName = "423623861221.dkr.ecr.ap-south-1.amazonaws.com/jobby-appa"
-        appRegistry = "https://423623861221.dkr.ecr.ap-south-1.amazonaws.com"
-    }
+    
     stages {
-        stage ("clone code") {
+        stage ("Checkout") {
             steps {
-                git branch: "master" url:"https://github.com/Pranay0189/Jobby.git"
+                git branch: "main", url: "https://github.com/Pranay0189/Jobby.git"
             }
         }
-
+        
         stage ("Install Dependencies") {
             steps {
                 sh "npm install"
             }
         }
-
-        stage ("Build") {
+        
+        stage ("code analysis") {
             steps {
-                sh "npm run build"
-            }
-            post {
-                success {
-                    echo "Build Success"
+                withSonarQubeEnv("SonarQube") {
+                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=Jobby-App \
+                    -Dsonar.projectName=Jobby-App \
+                    -Dsonar.sources=src/ \
+                    '''
                 }
             }
         }
-
-        stage ("Docker Build") {
+        stage ("docker login") {
             steps {
-                script {
-                    dockerImage = docker.build ( imageName + ":$BUILD_NUMBER", "./Dockerfile")
+                withCredentials([usernamePassword(credentialsId: 'dockerCredentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh '''
+                        echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+                    '''
                 }
             }
         }
-
-        stage ("Upload Image") {
+        stage ("build image") {
             steps {
-                script {
-                    docker.withRegistry ( appRegistry, registryCredentials ) {
-                        dockerImage.push("$BUILD_NUMBER")
-                        dockerImage.push("latest")
-                    }
-                }
+                sh "docker build -t tony878/jobby-app:${BUILD_NUMBER} ."
+            }
+        }
+        stage ("docker push") {
+            steps {
+                sh 'docker push tony878/jobby-app:${BUILD_NUMBER}'
             }
         }
     }
