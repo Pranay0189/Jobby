@@ -1,3 +1,4 @@
+import React from "react"
 import { Link } from "react-router-dom"
 import { BsFillBriefcaseFill, BsStarFill } from "react-icons/bs"
 import { MdLocationOn } from "react-icons/md"

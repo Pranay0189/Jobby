@@ -1,3 +1,4 @@
+import React from "react"
 import { BsSearch } from "react-icons/bs"
 
 import ProfileDetails from "../ProfileDetails"

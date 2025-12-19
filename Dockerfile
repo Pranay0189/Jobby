@@ -1,10 +1,10 @@
 #Stage-1 Build the application
 
-FROM node:16 as build 
+FROM node:16 AS build 
 
 WORKDIR /myapp
 
-COPY package*.json /.
+COPY package*.json ./
 
 RUN npm install
 

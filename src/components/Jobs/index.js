@@ -1,3 +1,4 @@
+import React from "react"
 import { Component } from "react"
 import Cookies from "js-cookie"
 import { TailSpin } from "react-loader-spinner"
