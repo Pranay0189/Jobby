@@ -1,6 +1,6 @@
 #Stage-1 Build the application
 
-FROM node:16 AS build 
+FROM node:22 AS build 
 
 WORKDIR /myapp
 
@@ -12,7 +12,7 @@ ADD . .
 
 
 #Stage-2 Run the Application
-FROM node:16-slim AS runtime
+FROM node:22-slim AS runtime
 
 WORKDIR /myapp
 
